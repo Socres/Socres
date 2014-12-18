@@ -1,6 +1,6 @@
 ﻿namespace SocresSamples.FakingEasy.SampleData
 {
-    public interface ISampleObject
+    public interface ISampleService
     {
         bool CanExecute { get; set; }
 
