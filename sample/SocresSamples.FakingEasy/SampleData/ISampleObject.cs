@@ -7,5 +7,7 @@
         void Execute();
 
         string ExecuteWithParam(string value);
+        
+        string ExecuteWithDto(SampleDto value);
     }
 }

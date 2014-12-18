@@ -26,5 +26,15 @@
 
             return string.Empty;
         }
+
+        public string ExecuteSampleWithDto(SampleDto value)
+        {
+            if (_sampleObject.CanExecute)
+            {
+                return _sampleObject.ExecuteWithDto(value);
+            }
+
+            return string.Empty;
+        }
     }
 }

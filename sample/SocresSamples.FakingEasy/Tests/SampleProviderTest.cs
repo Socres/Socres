@@ -10,7 +10,8 @@
     {
         [Theory]
         [AutoFakeItEasyData]
-        public void SampleProvider_Execute_Succeeds(ISampleObject sampleObject)
+        public void SampleProvider_Execute_Succeeds(
+            ISampleObject sampleObject)
         {
             A.CallTo(() => sampleObject.CanExecute)
                 .Returns(true);
@@ -45,7 +46,7 @@
         [Theory]
         [InlineAutoFakeItEasyData(true, "ReturnValueFirst")]
         [InlineAutoFakeItEasyData(false, "")]
-        public void SampleProvider_ExecuteWithCanExecute_Succeeds(
+        public void SampleProvider_ExecuteWithParams_CanExecute_Succeeds(
             bool canExecute,
             string returnValue,
             ISampleObject sampleObject,
@@ -60,6 +61,51 @@
             var actual = sampleProvider.ExecuteSampleWithParam(value);
 
             A.CallTo(() => sampleObject.ExecuteWithParam(A<string>.Ignored))
+                .MustHaveHappened(
+                    canExecute
+                    ? Repeated.Exactly.Once
+                    : Repeated.Never);
+            Assert.Equal(returnValue, actual);
+        }
+
+        [Theory]
+        [AutoFakeItEasyData]
+        public void SampleProvider_ExecuteWithDto_Succeeds(
+            ISampleObject sampleObject,
+            SampleDto dto,
+            string returnValue)
+        {
+            A.CallTo(() => sampleObject.CanExecute)
+                .Returns(true);
+            A.CallTo(() => sampleObject.ExecuteWithDto(dto))
+                .Returns(returnValue);
+
+            var sampleProvider = new SampleProvider(sampleObject);
+            var actual = sampleProvider.ExecuteSampleWithDto(dto);
+
+            A.CallTo(() => sampleObject.ExecuteWithDto(A<SampleDto>.Ignored))
+                .MustHaveHappened(Repeated.Exactly.Once);
+            Assert.Equal(returnValue, actual);
+        }
+
+        [Theory]
+        [InlineAutoFakeItEasyData(true, "ReturnValueFirst")]
+        [InlineAutoFakeItEasyData(false, "")]
+        public void SampleProvider_ExecuteWithDto_CanExecute_Succeeds(
+            bool canExecute,
+            string returnValue,
+            ISampleObject sampleObject,
+            SampleDto dto)
+        {
+            A.CallTo(() => sampleObject.CanExecute)
+                .Returns(canExecute);
+            A.CallTo(() => sampleObject.ExecuteWithDto(dto))
+                .Returns(returnValue);
+
+            var sampleProvider = new SampleProvider(sampleObject);
+            var actual = sampleProvider.ExecuteSampleWithDto(dto);
+
+            A.CallTo(() => sampleObject.ExecuteWithDto(A<SampleDto>.Ignored))
                 .MustHaveHappened(
                     canExecute
                     ? Repeated.Exactly.Once
