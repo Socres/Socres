@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SocresSamples.Web.Mvc")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Centric")]
+[assembly: AssemblyCompany("Socres")]
 [assembly: AssemblyProduct("SocresSamples.Web.Mvc")]
-[assembly: AssemblyCopyright("Copyright © Centric 2014")]
+[assembly: AssemblyCopyright("Copyright © Socres 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
