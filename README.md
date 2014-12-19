@@ -2,6 +2,7 @@
 
 This repository has several project containing a set of building blocks for building your typical business application.
 
+[![Build status](https://ci.appveyor.com/api/projects/status/ek97x5yray3psxxj?svg=true)](https://ci.appveyor.com/project/Socres/socres)
 
 ### Source
 - The Src folder contains the Socres solution. This solution has the projects with all the different building blocks.
