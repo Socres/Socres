@@ -7,7 +7,7 @@ When using this attribute on a test method, all parameters of the method will be
 In the example below, sampleService will be an instance of a class implementing ISampleService.
 Both value and returnValue will be random generated strings.
 
-```cs
+```csharp
 [Theory]
 [AutoFakeItEasyData]
 public void SampleProvider_ExecuteWithParam_Succeeds(
@@ -35,7 +35,7 @@ When using this attribute on a test method, you can supply fixed values for para
 In the example below, this test will be executed twice, one time with canExecute true and returnValue "ReturnValueFirst" and a second time with canExecute false and returnValue "".
 The sampleService and value will be automatically instantiated with an instance of a class implementing ISampleService and a random generated string.
 
-```cs
+```csharp
 [Theory]
 [InlineAutoFakeItEasyData(true, "ReturnValueFirst")]
 [InlineAutoFakeItEasyData(false, "")]
