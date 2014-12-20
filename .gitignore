@@ -10,7 +10,6 @@ PublishProfiles/
 *.cache
 *.docstates
 _ReSharper.*
-nuget.exe
 *.userprefs
 *.*sdf
 /*.vspx
