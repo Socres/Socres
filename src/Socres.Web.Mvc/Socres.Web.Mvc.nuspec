@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Socres.Web.Mvc</id>
+        <version>1.0.0</version>
+        <authors>Socres</authors>
+        <owners>Socres</owners>
+        <licenseUrl>https://github.com/BlueBasher/Socres/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/Socres/Socres/tree/master/src/Socres.Web.Mvc</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>This package contains several helper for Asp.Net.
+These include:
+  - CultureBasedActionAttribute
+
+For a full list of helpers, look at the project site.</description>
+        <dependencies>
+            <dependency id="Microsoft.AspNet.Mvc" version="5.2.2" />
+            <dependency id="Microsoft.AspNet.Razor" version="3.2.2" />
+            <dependency id="Microsoft.AspNet.WebPages" version="3.2.2" />
+            <dependency id="Microsoft.Web.Infrastructure" version="1.0.0.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\Socres.Web.Mvc.dll" target="lib\net45\Socres.Web.Mvc.dll" />
+        <file src="bin\Release\Socres.Web.Mvc.pdb" target="lib\net45\Socres.Web.Mvc.pdb" />
+    </files>
+</package>
