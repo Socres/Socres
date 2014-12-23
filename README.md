@@ -6,7 +6,14 @@ Everyone is socially responsible and everyone has the opportunity to contribute 
 
 This repository has several project containing a set of building blocks for building your typical business application.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/ek97x5yray3psxxj?svg=true)](https://ci.appveyor.com/project/Socres/socres)
+[![Build status][build-status-image]][build-status]  [![Issue Stats][pull-requests-image]][pull-requests]  [![Issue Stats][issues-closed-image]][issues-closed]
+
+[build-status-image]: https://ci.appveyor.com/api/projects/status/ek97x5yray3psxxj/branch/master?svg=true
+[build-status]: https://ci.appveyor.com/project/Socres/socres/branch/master
+[pull-requests-image]: http://www.issuestats.com/github/Socres/socres/badge/pr
+[pull-requests]: http://www.issuestats.com/github/Socres/socres
+[issues-closed-image]: http://www.issuestats.com/github/Socres/socres/badge/issue
+[issues-closed]: http://www.issuestats.com/github/Socres/socres
 
 ### Source
 - The Src folder contains the Socres solution. This solution has the projects with all the different building blocks.
