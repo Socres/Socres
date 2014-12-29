@@ -6,7 +6,7 @@
         <authors>Socres</authors>
         <owners>Socres</owners>
         <licenseUrl>https://github.com/BlueBasher/Socres/blob/master/LICENSE</licenseUrl>
-        <projectUrl>https://github.com/Socres/Socres/tree/master/src/Socres.Web.Mvc</projectUrl>
+        <projectUrl>https://github.com/Socres/Socres/wiki/Web.Mvc</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>This package contains several helper for Asp.Net.
 These include:
