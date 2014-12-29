@@ -1,5 +1,9 @@
 #Socres
 
+Stands for SOCial RESponsibility.
+
+Everyone is socially responsible and everyone has the opportunity to contribute to the world, the environment in which we live and work. Each in their own way.
+
 This repository has several project containing a set of building blocks for building your typical business application.
 
 [![Build status][build-status-image]][build-status]  [![Issue Stats][pull-requests-image]][pull-requests]  [![Issue Stats][issues-closed-image]][issues-closed]
