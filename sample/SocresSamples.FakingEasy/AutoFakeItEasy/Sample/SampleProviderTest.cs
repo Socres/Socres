@@ -1,7 +1,7 @@
-﻿namespace SocresSamples.FakingEasy.Tests
+﻿namespace SocresSamples.FakingEasy.AutoFakeItEasy.Sample
 {
     using Socres.FakingEasy.AutoFakeItEasy;
-    using SocresSamples.FakingEasy.SampleData;
+    using SocresSamples.FakingEasy.AutoFakeItEasy.SampleData;
     using FakeItEasy;
     using Xunit;
     using Xunit.Extensions;

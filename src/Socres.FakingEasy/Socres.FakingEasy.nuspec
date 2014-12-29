@@ -6,9 +6,9 @@
         <authors>Socres</authors>
         <owners>Socres</owners>
         <licenseUrl>https://github.com/BlueBasher/Socres/blob/master/LICENSE</licenseUrl>
-        <projectUrl>https://github.com/Socres/Socres/tree/master/src/Socres.FakingEasy</projectUrl>
+        <projectUrl>https://github.com/Socres/Socres/wiki/FakingEasy</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>This package contains attributes for automatically faking parameters in test methods.
+        <description>This package contains attributes for automatically creating all types of fake object, mocks, stubs, etc.
 These attributes combine FakeItEasy, xUnit and AutoFixture.</description>
         <dependencies>
             <dependency id="AutoFixture" version="3.21.1" />

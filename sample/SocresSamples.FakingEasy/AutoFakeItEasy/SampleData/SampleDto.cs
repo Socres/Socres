@@ -1,4 +1,4 @@
-﻿namespace SocresSamples.FakingEasy.SampleData
+﻿namespace SocresSamples.FakingEasy.AutoFakeItEasy.SampleData
 {
     public class SampleDto
     {
