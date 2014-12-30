@@ -1,6 +1,7 @@
 ﻿namespace Socres.Web.Mvc.FilterAttributes
 {
     using System;
+    using System.Diagnostics;
     using System.Globalization;
     using System.Linq;
     using System.Threading;
@@ -121,8 +122,11 @@
                 Thread.CurrentThread.CurrentCulture = cultureInfo;
                 Thread.CurrentThread.CurrentUICulture = cultureInfo;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Trace.TraceError(
+                    string.Format("Error setting ThreadCulture in CultureBasedActionAttribute: {0}",
+                        ex.Message));
             }
         }
     }

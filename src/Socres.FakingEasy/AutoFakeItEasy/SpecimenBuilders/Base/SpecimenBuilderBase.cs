@@ -9,7 +9,7 @@
     /// <summary>
     /// Base class for all <see cref="ISpecimenBuilder"/>
     /// </summary>
-    public abstract class SpecimenBuilderBase
+    public abstract class SpecimenBuilderBase: ISpecimenBuilder
     {
         /// <summary>
         /// Gets the name of the request using the <see cref="PropertyInfo"/> or <see cref="ParameterInfo"/>.
@@ -41,6 +41,11 @@
         /// <returns></returns>
         protected bool IsRequestForType(object request, Type type)
         {
+            if (request as Type == type)
+            {
+                return true;
+            }
+
             var paramInfo = request as ParameterInfo;
             var propInfo = request as PropertyInfo;
 
@@ -69,6 +74,30 @@
             }
 
             return new List<CustomAttributeData>();
+        }
+
+        /// <summary>
+        /// Creates a new specimen based on a request.
+        /// </summary>
+        /// <param name="request">The request that describes what to create.</param>
+        /// <param name="context">A context that can be used to create other specimens.</param>
+        /// <returns>
+        /// The requested specimen if possible; otherwise a <see cref="T:Ploeh.AutoFixture.Kernel.NoSpecimen" /> instance.
+        /// </returns>
+        /// <exception cref="System.NotImplementedException"></exception>
+        /// <remarks>
+        /// <para>
+        /// The <paramref name="request" /> can be any object, but will often be a
+        /// <see cref="T:System.Type" /> or other <see cref="T:System.Reflection.MemberInfo" /> instances.
+        /// </para>
+        /// <para>
+        /// Note to implementers: Implementations are expected to return a
+        /// <see cref="T:Ploeh.AutoFixture.Kernel.NoSpecimen" /> instance if they can't satisfy the request.
+        /// </para>
+        /// </remarks>
+        public virtual object Create(object request, ISpecimenContext context)
+        {
+            return new NoSpecimen(request);
         }
     }
 }

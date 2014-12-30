@@ -4,7 +4,7 @@
     using Ploeh.AutoFixture;
 
     /// <summary>
-    /// 
+    /// Adds the default customizations
     /// </summary>
     public class DefaultCustomization : ICustomization
     {

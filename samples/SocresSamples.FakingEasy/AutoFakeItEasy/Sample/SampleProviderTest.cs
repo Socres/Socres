@@ -13,12 +13,15 @@
         public void SampleProvider_Execute_Succeeds(
             ISampleService sampleService)
         {
+            // Arrange
             A.CallTo(() => sampleService.CanExecute)
                 .Returns(true);
-
             var sampleProvider = new SampleProvider(sampleService);
+
+            // Act
             sampleProvider.ExecuteSample();
 
+            // Assert
             A.CallTo(() => sampleService.Execute())
                 .MustHaveHappened(Repeated.Exactly.Once);
         }
@@ -30,14 +33,17 @@
             string value,
             string returnValue)
         {
+            // Arrange
             A.CallTo(() => sampleService.CanExecute)
                 .Returns(true);
             A.CallTo(() => sampleService.ExecuteWithParam(value))
                 .Returns(returnValue);
-
             var sampleProvider = new SampleProvider(sampleService);
+
+            // Act
             var actual = sampleProvider.ExecuteSampleWithParam(value);
 
+            // Assert
             A.CallTo(() => sampleService.ExecuteWithParam(A<string>.Ignored))
                 .MustHaveHappened(Repeated.Exactly.Once);
             Assert.Equal(returnValue, actual);
@@ -52,14 +58,17 @@
             ISampleService sampleService,
             string value)
         {
+            // Arrange
             A.CallTo(() => sampleService.CanExecute)
                 .Returns(canExecute);
             A.CallTo(() => sampleService.ExecuteWithParam(value))
                 .Returns(returnValue);
-
             var sampleProvider = new SampleProvider(sampleService);
+
+            // Act
             var actual = sampleProvider.ExecuteSampleWithParam(value);
 
+            // Assert
             A.CallTo(() => sampleService.ExecuteWithParam(A<string>.Ignored))
                 .MustHaveHappened(
                     canExecute
@@ -75,14 +84,17 @@
             SampleDto dto,
             string returnValue)
         {
+            // Arrange
             A.CallTo(() => sampleService.CanExecute)
                 .Returns(true);
             A.CallTo(() => sampleService.ExecuteWithDto(dto))
                 .Returns(returnValue);
-
             var sampleProvider = new SampleProvider(sampleService);
+
+            // Act
             var actual = sampleProvider.ExecuteSampleWithDto(dto);
 
+            // Assert
             A.CallTo(() => sampleService.ExecuteWithDto(A<SampleDto>.Ignored))
                 .MustHaveHappened(Repeated.Exactly.Once);
             Assert.Equal(returnValue, actual);
@@ -97,14 +109,17 @@
             ISampleService sampleService,
             SampleDto dto)
         {
+            // Arrange
             A.CallTo(() => sampleService.CanExecute)
                 .Returns(canExecute);
             A.CallTo(() => sampleService.ExecuteWithDto(dto))
                 .Returns(returnValue);
-
             var sampleProvider = new SampleProvider(sampleService);
+
+            // Act
             var actual = sampleProvider.ExecuteSampleWithDto(dto);
 
+            // Assert
             A.CallTo(() => sampleService.ExecuteWithDto(A<SampleDto>.Ignored))
                 .MustHaveHappened(
                     canExecute
