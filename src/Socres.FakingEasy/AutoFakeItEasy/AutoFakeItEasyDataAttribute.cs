@@ -1,9 +1,11 @@
 ﻿namespace Socres.FakingEasy.AutoFakeItEasy
 {
+    using System;
     using Socres.FakingEasy.AutoFakeItEasy.Customizations;
     using Ploeh.AutoFixture;
     using Ploeh.AutoFixture.AutoFakeItEasy;
     using Ploeh.AutoFixture.Xunit;
+    using Socres.FakingEasy.AutoFakeItEasy.SpecimenBuilders.Base;
 
     /// <summary>
     /// Attribute for having faked method parameters.
@@ -22,6 +24,16 @@
         {
             Fixture.Customize(new AutoFakeItEasyCustomization());
             Fixture.Customize(new DefaultCustomization());
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AutoFakeItEasyDataAttribute"/> class.
+        /// </summary>
+        /// <param name="specimenBuilders">The specimen builders.</param>
+        public AutoFakeItEasyDataAttribute(params Type[] specimenBuilders)
+            :this()
+        {
+            Fixture.Customize(new CustomSpecimenBuildersCustomization(specimenBuilders));
         }
     }
 }

@@ -1,18 +1,20 @@
-﻿namespace Socres.FakingEasy.AutoFakeItEasy.SpecimenBuilders
+﻿namespace Socres.Web.Mvc.Tests.SpecimenBuilders
 {
-    using System;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using Socres.FakingEasy.AutoFakeItEasy.SpecimenBuilders.Base;
+    using System.Collections;
+    using System.Web;
+    using System.Web.Mvc;
+    using System.Web.Routing;
+    using FakeItEasy;
     using Ploeh.AutoFixture.Kernel;
+    using Socres.FakingEasy.AutoFakeItEasy.SpecimenBuilders.Base;
 
     /// <summary>
-    /// SpecimenBuilder that creates a <see cref="string"/> taking an optional <see cref="StringLengthAttribute"/> in account.
+    /// SpecimenBuilder that creates a <see cref="ActionExecutingContext"/>
     /// </summary>
-    public class StringLengthSpecimenBuilder : SpecimenBuilderBase
+    public class ActionExecutingContextSpecimenBuilder : SpecimenBuilderBase
     {
         /// <summary>
-        /// Creates a new <see cref="String"/> specimen based on a request.
+        /// Creates a new <see cref="ActionExecutingContext"/> specimen based on a request.
         /// </summary>
         /// <param name="request">The request that describes what to create.</param>
         /// <param name="context">A context that can be used to create other specimens.</param>
@@ -32,25 +34,19 @@
         /// </remarks>
         public override object Create(object request, ISpecimenContext context)
         {
-            if (!IsRequestForType(request, typeof(string)))
+            if (!IsRequestForType(request, typeof(ActionExecutingContext)))
             {
                 return new NoSpecimen(request);
             }
 
-            // Check StringLength
-            var stringLengths = GetCustomAttributeData<StringLengthAttribute>(request).ToList();
-            if (!stringLengths.Any())
-            {
-                return new NoSpecimen(request);
-            }
+            var controller = (Controller)context.Resolve(typeof(Controller));
+            var actionDescriptor = (ActionDescriptor) context.Resolve(typeof (ActionDescriptor));
 
-            var maxLength = (int)stringLengths.Single().ConstructorArguments.First().Value;
-            var value = string.Format("{0}{1}", GetRequestName(request), Guid.NewGuid());
-            if (value.Length > maxLength)
-            {
-                value = value.Substring(0, maxLength);
-            }
-            return value;
+            var actionExecutingContext = A.Fake<ActionExecutingContext>();
+            actionExecutingContext.Controller = controller;
+            actionExecutingContext.ActionDescriptor = actionDescriptor;
+
+            return actionExecutingContext;
         }
     }
 }
