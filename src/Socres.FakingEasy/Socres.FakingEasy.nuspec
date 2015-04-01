@@ -15,8 +15,8 @@ These attributes combine FakeItEasy, xUnit and AutoFixture.</description>
             <dependency id="AutoFixture.AutoFakeItEasy" version="3.21.1" />
             <dependency id="AutoFixture.Xunit" version="3.21.1" />
             <dependency id="FakeItEasy" version="1.25.1" />
-            <dependency id="xunit" version="(1.9.2,2.0)" />
-            <dependency id="xunit.extensions" version="(1.9.2,2.0)" />
+            <dependency id="xunit" version="[1.9.2,2.0)" />
+            <dependency id="xunit.extensions" version="[1.9.2,2.0)" />
         </dependencies>
     </metadata>
     <files>
