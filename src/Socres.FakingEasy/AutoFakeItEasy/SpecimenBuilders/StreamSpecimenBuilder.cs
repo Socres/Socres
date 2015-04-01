@@ -28,11 +28,11 @@
         ///   <see cref="T:Ploeh.AutoFixture.Kernel.NoSpecimen" /> instance if they can't satisfy the request.
         ///   </para>
         /// </remarks>
-        public object Create(object request, ISpecimenContext context)
+        public override object Create(object request, ISpecimenContext context)
         {
             if (!IsRequestForType(request, typeof(Stream)))
             {
-                return new NoSpecimen();
+                return new NoSpecimen(request);
             }
 
             var data = (byte[])context.Resolve(typeof(byte[]));
