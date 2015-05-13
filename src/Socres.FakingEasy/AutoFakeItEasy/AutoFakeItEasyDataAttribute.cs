@@ -4,7 +4,7 @@
     using Socres.FakingEasy.AutoFakeItEasy.Customizations;
     using Ploeh.AutoFixture;
     using Ploeh.AutoFixture.AutoFakeItEasy;
-    using Ploeh.AutoFixture.Xunit;
+    using Ploeh.AutoFixture.Xunit2;
     using Socres.FakingEasy.AutoFakeItEasy.SpecimenBuilders.Base;
 
     /// <summary>
