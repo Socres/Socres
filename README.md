@@ -1,6 +1,6 @@
 #Socres
 
-Stands for SOCial RESponsibility.
+Socres stands for SOCial RESponsibility.
 
 Everyone is socially responsible and everyone has the opportunity to contribute to the world, the environment in which we live and work. Each in their own way.
 
