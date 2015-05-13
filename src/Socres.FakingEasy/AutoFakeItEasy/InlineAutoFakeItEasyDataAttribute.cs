@@ -1,7 +1,8 @@
 ﻿namespace Socres.FakingEasy.AutoFakeItEasy
 {
-    using Ploeh.AutoFixture.Xunit;
-    using Xunit.Extensions;
+    using Ploeh.AutoFixture.Xunit2;
+    using Xunit;
+    using Xunit.Sdk;
 
     /// <summary>
     /// Method for having inline method parameters.
