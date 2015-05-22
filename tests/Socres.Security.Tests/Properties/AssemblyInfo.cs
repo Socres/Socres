@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Socres.Web.Mvc.Tests")]
+[assembly: AssemblyTitle("Socres.Security.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Socres")]
-[assembly: AssemblyProduct("Socres.Web.Mvc.Tests")]
+[assembly: AssemblyProduct("Socres.Security.Tests")]
 [assembly: AssemblyCopyright("Copyright © Socres 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e0f34a80-6531-49ed-8564-6e138ad725a3")]
+[assembly: Guid("7a441213-6f4f-4ff4-9b78-11341e0de8ba")]
 
 // Version information for an assembly consists of the following four values:
 //
