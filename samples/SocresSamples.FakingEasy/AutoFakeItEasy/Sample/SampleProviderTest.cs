@@ -1,10 +1,9 @@
 ﻿namespace SocresSamples.FakingEasy.AutoFakeItEasy.Sample
 {
+    using FakeItEasy;
     using Socres.FakingEasy.AutoFakeItEasy;
     using SocresSamples.FakingEasy.AutoFakeItEasy.SampleData;
-    using FakeItEasy;
     using Xunit;
-    using Xunit.Extensions;
 
     public class SampleProviderTest
     {
