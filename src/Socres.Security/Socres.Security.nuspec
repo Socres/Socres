@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Socres.Security</id>
+        <version>$version$</version>
+        <authors>Socres</authors>
+        <owners>Socres</owners>
+        <licenseUrl>https://github.com/Socres/Socres/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/Socres/Socres/wiki/Security</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>This package contains several components for Security.
+These include:
+  - CryptoProvider
+  - PasswordGenerator
+
+For a full list of helpers, look at the project site.</description>        
+        <dependencies>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\Socres.Security.dll" target="lib\net45\Socres.Security.dll" />
+        <file src="bin\Release\Socres.Security.pdb" target="lib\net45\Socres.Security.pdb" />
+    </files>
+</package>
