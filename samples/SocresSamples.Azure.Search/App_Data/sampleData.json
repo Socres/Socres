@@ -1,0 +1,137 @@
+﻿[
+    {
+        "id": "1",
+        "name": "Chichén Itzá",
+        "continent": "South America",
+        "country": "Mexico",
+        "city": "Chichén Itzá",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Chichen-Itza-Castillo-Seen-From-East.JPG",
+        "location": { "type": "Point", "coordinates": [ -88.5672301, 20.6828375 ] }
+    },
+    {
+        "id": "2",
+        "name": "Statue of Liberty",
+        "continent": "North America",
+        "country": "USA",
+        "city": "New York",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Statue-of-liberty_tysto.jpg/266px-Statue-of-liberty_tysto.jpg",
+        "location": { "type": "Point", "coordinates": [ -74.0445004, 40.6892494 ] }
+    },
+    {
+        "id": "3",
+        "name": "Pyramids",
+        "continent": "Africa",
+        "country": "Egypt",
+        "city": "Giza",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg",
+        "location": { "type": "Point", "coordinates": [ 31.1342019, 29.9792345 ] }
+    },
+    {
+        "id": "4",
+        "name": "Leaning Tower of Pisa",
+        "continent": "Europe",
+        "country": "Italie",
+        "city": "Pisa",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/The_Leaning_Tower_of_Pisa_SB.jpeg",
+        "location": { "type": "Point", "coordinates": [ 10.396597, 43.722952 ] }
+    },
+    {
+        "id": "5",
+        "name": "Taj Mahal",
+        "continent": "Asia",
+        "country": "India",
+        "city": "Agra",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Taj_Mahal_in_March_2004.jpg",
+        "location": { "type": "Point", "coordinates": [ 27.175, 78.041944 ] }
+    },
+    {
+        "id": "6",
+        "name": "Golden Gate Bridge",
+        "continent": "North America",
+        "country": "USA",
+        "city": "San Francisco",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Golden_Gate_Bridge_0002.jpg",
+        "location": { "type": "Point", "coordinates": [ 37.8199286, -122.4782551 ] }
+    },
+    {
+        "id": "7",
+        "name": "Stonehenge",
+        "continent": "Europe",
+        "country": "England",
+        "city": "Wiltshire",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Stonehenge%2C_Condado_de_Wiltshire%2C_Inglaterra%2C_2014-08-12%2C_DD_09.JPG",
+        "location": { "type": "Point", "coordinates": [ 51.178882, -1.826215 ] }
+    },
+    {
+        "id": "8",
+        "name": "Saint Basil's Cathedral",
+        "continent": "Asia",
+        "country": "Russia",
+        "city": "Moscow",
+        "imageUrl": "https://en.wikipedia.org/wiki/Saint_Basil%27s_Cathedral#/media/File:Moscow_StBasilCathedral_d18.jpg",
+        "location": { "type": "Point", "coordinates": [ 55.7525229, 37.6230868 ] }
+    },
+    {
+        "id": "9",
+        "name": "Colosseum",
+        "continent": "Europe",
+        "country": "Italy",
+        "city": "Rome",
+        "imageUrl": "https://en.wikipedia.org/wiki/Colosseum#/media/File:Colosseum_in_Rome,_Italy_-_April_2007.jpg",
+        "location": { "type": "Point", "coordinates": [ 55.7525229, 37.6230868 ] }
+    },
+    {
+        "id": "10",
+        "name": "Mount Rushmore",
+        "continent": "North America",
+        "country": "USA",
+        "city": "Keystone",
+        "imageUrl": "https://en.wikipedia.org/wiki/Mount_Rushmore#/media/File:Dean_Franklin_-_06.04.03_Mount_Rushmore_Monument_(by-sa)-3_new.jpg",
+        "location": { "type": "Point", "coordinates": [ -103.4590667, 43.8791025 ] }
+    },
+    {
+        "id": "11",
+        "name": "Christ the Redeemer",
+        "continent": "South America",
+        "country": "Brazil",
+        "city": "Rio de Janeiro",
+        "imageUrl": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)#/media/File:Cristo_Redentor_-_Rio_de_Janeiro,_Brasil.jpg",
+        "location": { "type": "Point", "coordinates": [ -22.951916, -43.2104872 ] }
+    },
+    {
+        "id": "12",
+        "name": "Mount Fuji",
+        "continent": "Asia",
+        "country": "Japan",
+        "city": "Fujinomiya",
+        "imageUrl": "https://en.wikipedia.org/wiki/Mount_Fuji#/media/File:Mt._Fuji,_enhanced.JPG",
+        "location": { "type": "Point", "coordinates": [ 35.3605271, 138.6577376 ] }
+    },
+    {
+        "id": "13",
+        "name": "Uluru",
+        "continent": "Australia",
+        "country": "Australia",
+        "city": "",
+        "imageUrl": "https://en.wikipedia.org/wiki/Uluru#/media/File:Uluru_(Helicopter_view)-crop.jpg",
+        "location": { "type": "Point", "coordinates": [ -25.3455606, 131.0195906 ] }
+    },
+    {
+        "id": "14",
+        "name": "Eiffel Tower",
+        "continent": "Europe",
+        "country": "France",
+        "city": "Paris",
+        "imageUrl": "https://en.wikipedia.org/wiki/Eiffel_Tower#/media/File:Tour_Eiffel_Wikimedia_Commons_(cropped).jpg",
+        "location": { "type": "Point", "coordinates": [ 48.8583701, 2.2944813 ] }
+    },
+    {
+        "id": "15",
+        "name": "The Great Wall",
+        "continent": "Asia",
+        "country": "China",
+        "city": "",
+        "imageUrl": "https://en.wikipedia.org/wiki/Great_Wall_of_China#/media/File:The_Great_Wall_of_China_at_Jinshanling-edit.jpg",
+        "location": { "type": "Point", "coordinates": [ 116.5681862, 40.4319077 ] }
+    }
+]

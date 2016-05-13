@@ -1,0 +1,30 @@
+﻿@model IEnumerable<SocresSamples.Azure.Search.Models.LandMark>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Socres Sample - Azure Search</h1>
+    <p class="lead"></p>
+    <p><a href="https://github.com/Socres/Socres" class="btn btn-primary btn-lg" target="_blank">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="row">
+        <div class="col-xs-8 col-sm-10">
+            @foreach (var landMark in Model)
+            {
+                <div class="row">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <span>@landMark.Name</span>
+                            </h4>
+                            <img src="@landMark.ImageUrl"/>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
